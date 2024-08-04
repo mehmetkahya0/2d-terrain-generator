@@ -1,0 +1,93 @@
+/* styles.css */
+body {
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  width: 100%;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+}
+
+header p {
+  margin: 0;
+  font-size: small;
+  color: #f0f0f0;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: bolder !important;
+}
+
+#controls {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.settings {
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(213, 213, 213);
+  padding: 10px;
+  border-radius: 5px;
+  margin: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+input[type="range"] {
+  width: 200px;
+  margin: 5px 10px;
+}
+
+#generate {
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: bolder;
+  transition: 0.2s ease-in-out;
+}
+
+#generate:hover {
+  background-color: #ffffff;
+  color: #000000;
+  transition: 0.2s ease-in-out;
+}
+
+canvas {
+  border: 1px solid black;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.description {
+  font-size: smaller;
+  margin: 10px;
+  text-align: center;
+  opacity: 0.5;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Terrain Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <h1>Terrain Generator</h1>
+      <p>
+        Use the sliders to adjust the base and detail noise scales, then click
+        the button to generate a new terrain.
+      </p>
+    </header>
+
+    <div class="settings">
+      <label for="baseNoiseScale">Base Noise Scale: </label>
+      <input
+        type="range"
+        id="baseNoiseScale"
+        min="0.01"
+        max="3"
+        step="0.25"
+        value="0.05"
+      />
+
+      <span id="baseNoiseScaleValue">0.05</span>
+      <p class="description">
+        description: The base noise scale determines the size of the terrain (high values create larger terrain features and zoom-out).
+      </p>
+      <br />
+      <label for="detailNoiseScale">Detail Noise Scale: </label>
+      <input
+        type="range"
+        id="detailNoiseScale"
+        min="0.1"
+        max="5"
+        step="0.25"
+        value="0.15"
+      />
+      <span id="detailNoiseScaleValue">0.15</span>
+      <br />
+      <p class="description">
+        description: The detail noise scale determines the amount of detail in the terrain (higher values create more detailed terrain).
+      </p>
+      <button id="generate">Generate Terrain</button>
+    </div>
+
+    <canvas id="terrain" width="800" height="600"></canvas>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/simplex-noise/2.4.0/simplex-noise.min.js"></script>
+    <script src="canvas.js"></script>
+  </body>
+</html>
